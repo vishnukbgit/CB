@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    environment {
+
+        GITHUB_CREDENTIALS = credentials('ananthu&#039;s github key')
+        AWS_CREDENTIALS = credentials('awscredentials')
+        
+    }
+    
+    stages {
+        stage('Build Docker Image') {
+            steps {
+
+                dir('culturebie-comments-processor'){                                                //culturebie-comments-processor image build and push
+                    script {
+                   
+                        docker.withRegistry('https://133194539480.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:awscredentials') {
+
+                        def app = docker.build("133194539480.dkr.ecr.us-east-1.amazonaws.com/userjobexecuter-dev:$params.TAG")
+                
+                        app.push()          // 
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
