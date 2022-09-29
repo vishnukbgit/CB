@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script{
                     //withAWS(credentials: 'CB-dev-awscredentials', region: 'us-east-1') {
-                    if($"{Environment}"=="DEVELOPMENT"){
+                    if(${Environment}=="DEVELOPMENT"){
                            
                             sh "aws eks --region us-east-1 update-kubeconfig --name CB_cluster_Dev"
                             sh "kubectl get svc"
