@@ -18,7 +18,7 @@ spec:
         - name: culturebie_csv_downloader
           image: 133194539480.dkr.ecr.us-east-1.amazonaws.com/culturebie_csv_downloader-dev
           ports:
-            - containerPort: 999
+            - containerPort: 8888
 ---
 apiVersion: v1
 kind: Service
@@ -29,5 +29,5 @@ spec:
     app: culturebie_csv_downloader
   ports:
     - protocol: TCP
-      port: 999
-      targetPort: 999
+      port: 8888
+      targetPort: 8888
