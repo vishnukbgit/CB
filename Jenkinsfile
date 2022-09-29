@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        AWS_DEFAULT_PROFILE='cbdev'
+        AWS_DEFAULT_PROFILE='cb-dev'
     }
 
     stages {
@@ -9,9 +9,10 @@ pipeline {
             steps {
                 script{
                     //withAWS(credentials: 'CB-dev-awscredentials', region: 'us-east-1') {
-                    //if($Environment=="DEVELOPMENT"){
-                           
+                        //if($Environment=="DEVELOPMENT"){
+                            sh "aws s3 ls"
                             sh "aws eks --region us-east-1 update-kubeconfig --name CB_cluster_Dev"
+
                             sh "kubectl get svc"
                         //}
                         //if ("${Environment}"=="QA"){
