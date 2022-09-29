@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: culturebie_csv_downloader
+  labels:
+    app: culturebie_csv_downloader
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: culturebie_csv_downloader
+  template:
+    metadata:
+      labels:
+        app: culturebie_csv_downloader
+    spec:
+      containers:
+        - name: culturebie_csv_downloader
+          image: 133194539480.dkr.ecr.us-east-1.amazonaws.com/culturebie_csv_downloader-dev
+          ports:
+            - containerPort: 999
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: culturebie_csv_downloader
+spec:
+  selector:
+    app: culturebie_csv_downloader
+  ports:
+    - protocol: TCP
+      port: 999
+      targetPort: 999

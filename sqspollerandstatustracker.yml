@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sqspollerandstatustracker
+  labels:
+    app: sqspollerandstatustracker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sqspollerandstatustracker
+  template:
+    metadata:
+      labels:
+        app: sqspollerandstatustracker
+    spec:
+      containers:
+        - name: sqspollerandstatustracker
+          image: 133194539480.dkr.ecr.us-east-1.amazonaws.com/sqspollerandstatustracker-dev
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sqspollerandstatustracker
+spec:
+  selector:
+    app: sqspollerandstatustracker
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
