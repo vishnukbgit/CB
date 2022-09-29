@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: culturebie_upload_processor
+  name: culturebie-upload-processor
   labels:
-    app: culturebie_upload_processor
+    app: culturebie-upload-processor
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: culturebie_upload_processor
+      app: culturebie-upload-processor
   template:
     metadata:
       labels:
-        app: culturebie_upload_processor
+        app: culturebie-upload-processor
     spec:
       containers:
-        - name: culturebie_upload_processor
+        - name: culturebie-upload-processor
           image: 133194539480.dkr.ecr.us-east-1.amazonaws.com/culturebie_upload_processor-dev
           ports:
             - containerPort: 4000
@@ -23,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: culturebie_upload_processor
+  name: culturebie-upload-processor
 spec:
   selector:
-    app: culturebie_upload_processor
+    app: culturebie-upload-processor
   ports:
     - protocol: TCP
       port: 4000
