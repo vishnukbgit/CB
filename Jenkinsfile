@@ -32,7 +32,7 @@ pipeline {
                     
                         //sh "kubectl apply -f culturebie-comments-processor.yml"
                         //sh " kubectl apply -f culturebie_csv_downloader.yml"
-                        //sh "kubectl apply -f culturebie_upload_processor.yml"
+                        sh "kubectl apply -f culturebie_upload_processor.yml"
                         //sh " kubectl apply -f sqspollerandstatustracker.yml"
                         sh "kubectl apply -f userjobexecuter.yml"
                     
