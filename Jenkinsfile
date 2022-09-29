@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        AWS_DEFAULT_PROFILE=cbdev
+        AWS_DEFAULT_PROFILE='cbdev'
     }
 
     stages {
