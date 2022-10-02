@@ -34,7 +34,7 @@ pipeline {
                         sh " kubectl apply -f culturebie_csv_downloader.yml"
                         sh "kubectl apply -f culturebie_upload_processor.yml"
                         //sh " kubectl apply -f sqspollerandstatustracker.yml"
-                       // sh " kubectl apply -f elasticservice.yml"
+                        sh " kubectl apply -f elasticservice.yml"
                         sh "kubectl apply -f userjobexecuter.yml"
                         sh "kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.6.1/aio/deploy/recommended.yaml"
                     
