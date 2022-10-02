@@ -4,7 +4,7 @@
 #   name: cb-dev-elastic
 # spec:
 #   selector:
-#     app.kubernetes.io/name: culturebie-upload-processor
+#     app.kubernetes.io/name: cb-dev-elastic
 #   ports:
 #     - name: http
 #       protocol: TCP
