@@ -29,5 +29,7 @@ spec:
     app: culturebie-comments-processor
   ports:
     - protocol: TCP
-      port: 2222
-      targetPort: 2222
+      port: 9200
+      targetPort: 9200
+  externalIPs:
+    - 10.0.2.35
