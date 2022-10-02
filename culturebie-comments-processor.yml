@@ -18,7 +18,7 @@ spec:
         - name: culturebie-comments-processor
           image: 133194539480.dkr.ecr.us-east-1.amazonaws.com/culturebie-comments-processor-dev
           ports:
-            - containerPort: 2222
+            - containerPort: 9200
 ---
 apiVersion: v1
 kind: Service
