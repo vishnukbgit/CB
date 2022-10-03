@@ -29,6 +29,6 @@ spec:
     app: culturebie-comments-processor
   ports:
     - protocol: TCP
-      port: 9200
+      port: 80
       targetPort: 9200
 
