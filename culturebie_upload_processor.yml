@@ -33,3 +33,4 @@ spec:
       targetPort: 9200
   externalIPs:
     - 10.0.6.112
+    - 10.0.6.168

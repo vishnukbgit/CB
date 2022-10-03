@@ -31,5 +31,6 @@ spec:
     - protocol: TCP
       port: 9200
       targetPort: 9200
- # externalIPs:
-   # - 10.0.2.35
+  externalIPs:
+    - 10.0.6.112
+    - 10.0.6.168
