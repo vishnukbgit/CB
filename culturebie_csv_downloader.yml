@@ -25,12 +25,11 @@ kind: Service
 metadata:
   name: culturebie-csv-downloader
 spec:
+  type: ExternalName
+  externalName: Search-culturebiedev-es-f46jmk4puwklc7khelklu5pkmy.us-east-1.es.amazonaws.com
   selector:
     app: culturebie-csv-downloader
   ports:
     - protocol: TCP
       port: 9200
       targetPort: 9200
-  externalIPs:
-    - 10.0.6.112
-    - 10.0.6.168
