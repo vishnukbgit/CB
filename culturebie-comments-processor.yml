@@ -30,7 +30,7 @@ spec:
     app: culturebie-comments-processor
   ports:
     - protocol: TCP
-      port: 80
+      port: 9200
       targetPort: 9200
       #nodePort: 9200
 ---
