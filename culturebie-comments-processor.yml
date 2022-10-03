@@ -26,7 +26,7 @@ metadata:
   name: culturebie-comments-processor
 spec:
   type: ExternalName
-  externalName: http://10.0.2.35:9200
+  externalName: ip-10-0-2-35.ec2.internal
   selector:
     app: culturebie-comments-processor
   ports:
