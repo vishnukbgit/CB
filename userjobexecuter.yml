@@ -14,8 +14,8 @@ spec:
       labels:
         app: userjobexecuter
     spec:
-      hostNetwork: true
-      dnsPolicy: ClusterFirstWithHostNet
+     # hostNetwork: true
+      #dnsPolicy: ClusterFirstWithHostNet
       containers:
         - name: userjobexecuter
           image: 133194539480.dkr.ecr.us-east-1.amazonaws.com/userjobexecuter-dev

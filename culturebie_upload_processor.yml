@@ -14,8 +14,8 @@ spec:
       labels:
         app: culturebie-upload-processor    
     spec:
-      hostNetwork: true
-      dnsPolicy: ClusterFirstWithHostNet
+      #hostNetwork: true
+      #dnsPolicy: ClusterFirstWithHostNet
       containers:
         - name: culturebie-upload-processor
           image: 133194539480.dkr.ecr.us-east-1.amazonaws.com/culturebie_upload_processor-dev
