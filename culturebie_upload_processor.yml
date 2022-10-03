@@ -26,7 +26,7 @@ metadata:
   name: culturebie-upload-processor
 spec:
   type: ExternalName
-  externalName: Search-culturebiedev-es-f46jmk4puwklc7khelklu5pkmy.us-east-1.es.amazonaws.com
+  externalName: search-culturebiedev-es-f46jmk4puwklc7khelklu5pkmy.us-east-1.es.amazonaws.com
   selector:
     app: culturebie-upload-processor
   ports:
