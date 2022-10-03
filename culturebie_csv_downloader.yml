@@ -5,7 +5,7 @@ metadata:
   labels:
     app: culturebie-csv-downloader
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: culturebie-csv-downloader
@@ -14,8 +14,6 @@ spec:
       labels:
         app: culturebie-csv-downloader
     spec:
-      #hostNetwork: true
-      #dnsPolicy: ClusterFirstWithHostNet
       containers:
         - name: culturebie-csv-downloader
           image: 133194539480.dkr.ecr.us-east-1.amazonaws.com/culturebie_csv_downloader-dev

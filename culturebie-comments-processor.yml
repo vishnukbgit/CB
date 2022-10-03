@@ -14,8 +14,6 @@ spec:
       labels:
         app: culturebie-comments-processor
     spec:
-      #hostNetwork: true
-      #dnsPolicy: ClusterFirstWithHostNet
       containers:
         - name: culturebie-comments-processor
           image: 133194539480.dkr.ecr.us-east-1.amazonaws.com/culturebie-comments-processor-dev
