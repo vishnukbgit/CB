@@ -25,14 +25,15 @@ kind: Service
 metadata:
   name: culturebie-comments-processor
 spec:
-  type: NodePort
+  hostNetwork: true
+  dnsPolicy: ClusterFirstWithHostNet
   selector:
     app: culturebie-comments-processor
   ports:
     - protocol: TCP
       port: 9200
       targetPort: 9200
-      #nodePort: 9200
+      
 ---
 apiVersion: v1
 kind: Endpoints
