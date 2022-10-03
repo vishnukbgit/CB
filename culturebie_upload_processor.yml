@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: culturebie-upload-processor
+        app.kubernetes.io/name: proxy    
     spec:
       containers:
         - name: culturebie-upload-processor
@@ -27,6 +28,7 @@ metadata:
 spec:
   selector:
     app: culturebie-upload-processor
+    app.kubernetes.io/name: proxy
   ports:
     - protocol: TCP
       port: 80
